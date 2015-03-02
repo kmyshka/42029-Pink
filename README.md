@@ -1,7 +1,7 @@
-# Проект «Pink»
+﻿# Проект «Pink»
 
 * Студент: [Ксения Павлюченко](https://htmlacademy.ru/profile/id42029).
-* Наставник: `Unknown`.
+* Наставник: [Алексей Малейков](https://htmlacademy.ru/profile/a).
 
 --
 
