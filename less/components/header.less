@@ -1,0 +1,44 @@
+.page-header{
+  position: relative;
+.bg-transp(black, 0.3);
+  padding: 18px 0 16px;
+  margin-bottom: 20px;
+
+  &__wrapper{
+    .margpad(0 auto);
+    width: @wrap-width;
+
+    &:after{
+    .clearboth();
+    }
+  }
+
+  &__title{
+    float: left;
+    width: 75px;
+    .margpad();
+
+    a{
+    .link();
+    .font(@font-size: 32px, @font-weight: @regular);
+    font-family: gothamrounded, sans-serif;
+    .t-upper();
+      }
+  }
+
+  &__icon{
+      .backgr(url("@{base-url}burger.svg"), @imgpos-y: 4px);
+    float: right;
+    width: 50px;
+    height: 29px;
+
+   &--close{
+    float: right;
+    width: 24px;
+    height: 28px;
+      .backgr(url("@{base-url}menu-cross.svg"), @imgpos-y: 4px);
+    }
+  }
+}
+
+

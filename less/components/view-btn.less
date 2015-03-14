@@ -1,0 +1,19 @@
+.view-btn{
+  .link(@text-transform: none; @padding: 16px 0 15px);
+  .font(@font-size: 18px);
+
+  display: inline-block;
+  width: 274px;
+  border: 3px solid @white;
+  border-radius: 27px;
+  margin-bottom: 30px;
+
+  &:hover, &:active{
+    color: @pink;
+    background-color: @white;
+  }
+
+  &:active{
+    .col-transp(@pink, 0.3);
+  }
+}
