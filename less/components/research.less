@@ -1,0 +1,40 @@
+.research{
+  display: none;
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+.research{
+  display: block;
+  margin-top: 57px;
+
+  &__wrapper{
+    width: 88.5vw;
+   .margpad(0 auto);
+   .backgr(url("@{base-url}timer.png"));
+  }
+
+  &__info{
+    padding-left: 310px;
+     padding-bottom: 50px;
+  }
+
+  &__title{
+    .font(@black, 30px, @bold, 36px);
+    width: 170px;
+    margin-bottom: 10px;
+    padding-top: 40px;
+  }
+
+  &__text{
+    .font(@navy, 14px, @regular, 24px);
+    width: 42.8vw;
+    text-align: left;
+    margin: 0 0 10px;
+  }
+
+  &__link{
+    .font(@pink, 14px, @regular, 24px);
+
+  }
+ }
+}

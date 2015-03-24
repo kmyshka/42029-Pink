@@ -1,14 +1,48 @@
 .contacts{
-  position: relative;
   .t-center();
-  padding: 20px 0 0;
-  box-shadow: @box-shad;
-  background: url("@{base-url}map.jpg") no-repeat 0 100%;
-  background-size: contain;
+  padding: 0;
+  background: none;
 
   &__wrapper{
   .margpad(0 auto);
-  width: @wrap-width;
+  width: 88.5%;
+  }
+
+  &__slogan{
+    .font(@navy, 7vw, @thin, 8vw);
+    margin-bottom: 10.6%;
+    padding: 0 20px;
+  }
+
+  &__info{
+  .margpad(0, @padding: 0 0 32.5%);
+  list-style: none;
+}
+
+  &__item{
+  margin-bottom: 9.3%;
+  }
+
+  &__title{
+    .font(@navy, 18px, @bold, 20px);
+    margin-bottom: 5px;
+  }
+
+    &__phone,  &__email,  &__address{
+    .margpad();
+    .font(@pink, 24px, @thin, 28px);
+   }
+
+}
+@media (min-width: 300px) and (max-width: 320px) {
+.contacts{
+  position: relative;
+  background: url("@{base-url}map.jpg") no-repeat 0 100%;
+  background-size: contain;
+   .margpad(0 auto);
+
+  &__wrapper{
+  width: @wrap-mob;
   }
 
   &__slogan{
@@ -18,8 +52,6 @@
 
   &__info{
   .margpad(0, @padding: 0 0 200px);
-  list-style: none;
-  position: relative;
 
     &:after{
     content: "";
@@ -33,7 +65,6 @@
     border: 10px solid @white;
   }
 }
-
   &__item{
   margin-bottom: 30px;
   }
@@ -46,19 +77,83 @@
   &__phone,  &__email,  &__address{
   .margpad();
   .font(@pink, 24px, @thin, 28px);
-
  }
 
-  &::after{
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 160px solid transparent; /* Прозрачные границы */
-  border-top: 28px solid @white;
-  left: 0;
-  bottom: 14px;
-  z-index: 10;
+      &::after{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 160px solid transparent; /* Прозрачные границы */
+      border-top: 28px solid @white;
+      left: 0;
+      bottom: 14px;
+      z-index: 10;
+      }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+  .contacts{
+    position: relative;
+  background: url("@{base-url}map-700-1.jpg") no-repeat 0 100%;
+  background-size: auto;
+  padding: 50px 0 0;
+
+  &__wrapper{
+    .margpad(0 auto);
+      width: 620px;
   }
 
+  &__slogan{
+    .font(@navy, 40px, @thin, 47px);
+    margin-bottom: 40px;
+    padding: 0 40px;
+    margin-top: 0;
+    }
+
+      &__info{
+        position: relative;
+      .margpad(0, @padding: 0 0 354px);
+      font-size: 0;
+
+        &:after{
+        content: "";
+        position: absolute;
+        bottom: 144px;
+        left: 47%;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: @pink;
+        border: 10px solid @white;
+      }
+    }
+
+      &::after{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 350px solid transparent; /* Прозрачные границы */
+      border-top: 69px solid @white;
+      left: 0;
+      bottom: -42px;
+      z-index: 10;
+      }
+
+    &__item{
+    display: inline-block;
+    margin-bottom: 49px;
+    width: 310px;
+
+      &:nth-child(3){
+        width: 290px;
+      }
+    }
+
+    &__title{
+      margin-bottom: 10px;
+    }
+  }
 }

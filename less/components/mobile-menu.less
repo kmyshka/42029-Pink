@@ -4,13 +4,14 @@
   background: @navy;
   top: 0;
   left: 0;
-  width: @x-width;
-
+  min-width: 320px;
+  max-width: 1200px;
+  width: 100%;
 
 .page-header__navwrapper{
     .margpad(0 auto);
-    width: @wrap-width;
-    padding: 18px 0 16px;
+    width: 87.5%;
+    padding: 5.7% 0 5.4%;
 
     &:after{
     .clearboth();
@@ -18,13 +19,11 @@
   }
 }
 
-
 .menu-list{
     list-style: none;
     .margpad();
 
-
-  &__item a{
+    &__item a{
     .link();
     .font(@font-size: 18px, @line-height: 32px);
     display: block;
@@ -36,11 +35,26 @@
 
     &__item:nth-of-type(1) a{
     border-top: 1px solid @black;
-
   }
 }
 
+@media (min-width: 300px) and (max-width: 320px) {
+  .page-header__nav{
+   .page-header__navwrapper{
+    width: auto;
+    padding: 20px 20px 17px;
+   }
+ }
+}
 
+@media (min-width: 600px) and (max-width: 700px){
+  .page-header__nav{
+  .page-header__navwrapper{
+    width: auto;
+    padding: 27px 40px 38px;
+   }
+ }
+}
 
 
 

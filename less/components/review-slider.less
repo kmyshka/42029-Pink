@@ -1,10 +1,8 @@
 .review-slider{
-  background-image: linear-gradient(-5deg, @grey  10%,  @grey  20%, @white 20%);
-
+  background-image: linear-gradient(-5deg, @grey  5%,  @grey  19%, @white 19%);
+  padding-bottom: 120px;
 
   .slider-control{
-    box-shadow: @box-shad;
-    padding-bottom: 134px;
     &__toggle{
       background: @grey-con;
       border: 3px solid @white;
@@ -18,18 +16,67 @@
 
 .review{
   text-align: center;
-  padding: 45px 0 30px;
-  box-shadow: @box-shad;
-
+  padding: 14% 0 9.4%;
 
   &__name-reviewer{
-    .font(@black, 18px, @bold, 30px);
-    margin-bottom: 15px;
+    .font(@black, 5.6vw, @bold, 9.3vw);
+    margin-bottom: 4.6%;
   }
 
   &__comment-reviewer{
-    .font(@navy, 14px, @regular, 30px);
-    .margpad(0 20px);
+    .font(@navy, 4.3vw, @regular, 9.3vw);
+    .margpad(0 6.25%);
   }
 
+      &__prof-reviewer{
+      display: none;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 320px) {
+  .review-slider{
+    padding-bottom: 134px;
+  }
+  .review{
+    padding: 45px 0 0;
+
+    &__name-reviewer{
+      .font(@black, 18px, @bold, 30px);
+      margin-bottom: 15px;
+    }
+
+    &__comment-reviewer{
+      .font(@navy, 14px, @regular, 30px);
+      .margpad(0 20px);
+    }
+   }
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+  .review-slider{
+    padding-bottom: 110px;
+  }
+
+  .review{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 65px 0 0;
+
+    &__name-reviewer{
+      .font(@black, 20px, @bold, 30px);
+      margin-bottom: 5px;
+    }
+
+    &__comment-reviewer{
+      .font(@navy, 18px, @regular, 30px);
+      .margpad(0 20px);
+      margin-bottom: 35px;
+    }
+
+        &__prof-reviewer{
+      display: block;
+      .font(@navy, 14px, @regular, 30px);
+      margin: 0;
+    }
+   }
 }

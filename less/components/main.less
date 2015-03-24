@@ -1,11 +1,31 @@
 html{
-  .margpad(0 auto);
-  max-width: @x-width;
   font-family: 'Open Sans', sans-serif;
+
 }
 
 body{
-  .backgr(url("@{base-url}backgr.jpg"));
   .margpad();
-
 }
+
+.layout{
+  max-width: @x-desktop;
+  min-width: @x-mobile;
+  .backgr(url("@{base-url}background-320@2x.jpg"), @imgpos-x: 50%);
+  background-size: auto;
+  .margpad(0 auto);
+}
+
+@media (max-width: 320px) and (min-width: 300px){
+.layout{
+  .backgr(url("@{base-url}background-320.jpg"), @imgpos-x: 50%);
+  }
+}
+
+@media (min-width: 480px) and (max-width: 700px) {
+
+.layout{
+  .backgr(url("@{base-url}background-700@2x.jpg"), @imgpos-x: 50%);
+  background-size: auto 729px;
+  }
+}
+

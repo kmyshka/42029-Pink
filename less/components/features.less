@@ -1,21 +1,63 @@
 .features{
-  .margpad(0, @padding: 0 0 294px);
-  .font(@navy, 14px, @regular, 24px);
+  .margpad(0, @padding: 0 0 91.8%);
+  .font(@navy, 4vw, @regular, 7vw);
   list-style: none;
-  background: url("@{base-url}screen-320.png") no-repeat 50% 100%;
-
+  background: url("@{base-url}iphone-smile-320@1x.png") no-repeat 50% 100%;
+  background-size: 48vw auto;
 
   &__item{
-  margin-bottom: 35px;
+  margin-bottom: 11%;
     p{
       .margpad();
     }
   }
 
   &__title{
-    .font(@black, 18px, @bold, 24px);
-    margin-bottom: 10px;
+    .font(@black, 5vw, @bold, 7vw);
+    margin-bottom: 4%;
+  }
+}
 
+@media (min-width: 300px) and (max-width: 320px) {
+.features{
+  .margpad(0, @padding: 0 0 294px);
+  .font(@navy, 14px, @regular, 24px);
+  background-size: 158px auto;
+
+  &__item{
+  margin-bottom: 35px;
   }
 
+  &__title{
+    .font(@black, 18px, @bold, 24px);
+    margin-bottom: 10px;
+  }
+ }
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+  .features{
+    text-align: left;
+    width: 50.5%;
+
+
+    .margpad(0, @padding: 0 0 10px);
+    margin-left: 310px;
+      .font(@navy, 14px, @regular, 24px);
+    background-image: none;
+
+    &__item{
+    margin-bottom: 35px;
+      padding-right: 5px;
+      p{
+        word-wrap: break-word;
+
+      }
+    }
+
+    &__title{
+      .font(@black, 18px, @bold, 24px);
+      margin-bottom: 10px;
+    }
+  }
 }

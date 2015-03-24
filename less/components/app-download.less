@@ -5,7 +5,7 @@
 
   &__wrapper{
     .margpad(0 auto);
-    width: @wrap-width;
+    width: 87.5%;
   }
 
   &__links{
@@ -31,23 +31,62 @@
       background: @arguments;
       }
 
-
     &--apple{
       .backgr(url("@{base-url}apple-logo.svg"));
     }
-
     &--android{
       .backgr(url("@{base-url}android-logo.svg"));
-
     }
-
     &--windows{
       .backgr(url("@{base-url}microsoft-logo.svg"));
     }
+}
+  &__text{
+    .margpad();
+    .font(@font-size: 4.3vw; @font-weight: @thin; @line-height: 7.5vw);
   }
+}
+
+
+@media (min-width: 300px) and (max-width: 320px) {
+  .app-download{
+  background-color: #1d2631;
+  .t-center();
+  padding: 28px 0 32px;
+
+  &__wrapper{
+    width: @wrap-mob;
+  }
+
+  &__links{
+    .margpad(0 auto 22px);
+}
 
   &__text{
     .margpad();
     .font(@font-weight: @thin; @line-height: 24px);
   }
+}}
+
+
+@media(min-width: 600px) and (max-width: 700px){
+.app-download{
+   background-color: transparent;
+   width: 360px;
+   padding: 33px 0 107px;
+
+  &__wrapper{
+     width: 300px;
+  }
+
+  &__links{
+    .margpad(0 auto 36px);
+  }
+
+  &__text{
+    .font(@font-size: 18px; @font-weight: @thin; @line-height: 24px);
+  }
 }
+}
+
+

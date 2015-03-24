@@ -1,0 +1,37 @@
+  .page-footer{
+      display: none;
+   }
+
+@media (min-width: 600px) and (max-width: 700px) {
+  .page-footer{
+      display: block;
+      padding: 50px 0;
+      background: @white;
+
+      &__wrapper{
+        width: 620px;
+        .margpad(0 auto);
+
+          &:after{
+            .clearboth();
+          }
+
+      &__logo{
+        float: left;
+        width: 220px;
+      }
+
+      &__contacts{
+        float: left;
+        width: 180px;
+      }
+
+      &__copyright{
+        float: left;
+        width: 220px;
+      }
+
+  }
+
+}
+

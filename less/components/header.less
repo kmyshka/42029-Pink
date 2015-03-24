@@ -1,12 +1,12 @@
 .page-header{
   position: relative;
 .bg-transp(black, 0.3);
-  padding: 18px 0 16px;
-  margin-bottom: 20px;
+  padding: 5.7% 0 5.4%;
+  margin-bottom: 7.2%;
 
   &__wrapper{
     .margpad(0 auto);
-    width: @wrap-width;
+    width: 87.5%;
 
     &:after{
     .clearboth();
@@ -15,30 +15,53 @@
 
   &__title{
     float: left;
-    width: 75px;
-    .margpad();
-
-    a{
-    .link();
-    .font(@font-size: 32px, @font-weight: @regular);
-    font-family: gothamrounded, sans-serif;
-    .t-upper();
-      }
+    width: 23.4%;
+    height: 7.5%;
   }
 
   &__icon{
-      .backgr(url("@{base-url}burger.svg"), @imgpos-y: 4px);
+      .backgr(url("@{base-url}burger.svg"), @imgpos-y: 50%);
     float: right;
     width: 50px;
-    height: 29px;
+    height: 25px;
 
    &--close{
     float: right;
     width: 24px;
-    height: 28px;
-      .backgr(url("@{base-url}menu-cross.svg"), @imgpos-y: 4px);
+    height: 24px;
+    .backgr(url("@{base-url}menu-cross.svg"), @imgpos-y: 50%);
     }
   }
 }
 
+@media (min-width: 300px) and (max-width: 320px) {
+.page-header{
+  padding: 20px 0 17px;
+  margin-bottom: 23px;
 
+  &__wrapper{
+    width: auto;
+    padding: 0 20px;
+  }
+
+    &__icon, &--close{
+    height: 29px;
+    }
+ }
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+.page-header{
+  padding: 27px 0 38px;
+  margin-bottom: 74px;
+
+  &__wrapper{
+    width: auto;
+    padding: 0 40px;
+    }
+
+    &__icon, &--close{
+    height: 45px;
+   }
+  }
+}

@@ -1,14 +1,23 @@
 .price-slider{
+      padding-bottom: 68px;
+
+    &__slide:nth-child(1),
+    &__slide:nth-child(3){
+     display: none;
+   }
+
+   &__slide:nth-child(2){
+    width: 100%;
+   }
 
     .slider-control{
-      padding-bottom: 47px;
     &__toggle{
-      background: @grey-con;
-      border: 3px solid @grey-b;
+     background: @grey-con;
+     border: 3px solid @grey-b;
 
-        &--active{
-          .toggle-act();
-        }
+      &--active{
+       .toggle-act();
+      }
     }
   }
 }
@@ -17,9 +26,8 @@
   position: relative;
   .t-center();
   background: @navy;
-    border-right: @t-border;
-    border-left: @t-border;
-
+  border-right: @t-border;
+  border-left: @t-border;
 
   &__name{
     .font(@white, 18px, @bold, 30px);
@@ -35,11 +43,10 @@
     padding-bottom: 18px;
   }
 
-
   &__flag{
     position: absolute;
     top: 13px;
-    left: -26px;
+    left: -25px;
     width: 103px;
     height: 28px;
     overflow: hidden;
@@ -52,22 +59,21 @@
 
   &__table{
     border-collapse: collapse;
-      box-shadow: 0 99px 0 0 @grey-b;
-      margin-bottom: 40px;
-
-    tr{
-    border-bottom: @t-border;
+    box-shadow: 0 99px 0 0 @grey-b;
     border-right: @t-border;
     border-left: @t-border;
-    }
-}
+    width: inherit;
 
-  &__category{
-    position: relative;
-    .font(@navy, 14px, @regular, 30px);
-    width: 316px;
-    .t-upper();
-    padding: 14px 120px 14px 21px;
+    td{
+      border-bottom: @t-border;
+          padding: 14px 18px 14px 21px;
+      }
+    }
+
+    &__category{
+      position: relative;
+      .font(@navy, 14px, @regular, 30px);
+      .t-upper();
 
     &--check:after, &--cross:after{
       content: "";
@@ -78,16 +84,143 @@
 
     &--cross:after{
       width: 26px;
-      height: 26px;
+      height: 25px;
       .backgr(url("@{base-url}nocross.svg"));
     }
 
-
     &--check:after{
       width: 30px;
-      height: 21px;
+      height: 22px;
       .backgr(url("@{base-url}yes.svg"))
     }
   }
+}
 
+@media (min-width: 300px) and (max-width: 320px) {
+  .price-slider{
+      &__slide:nth-child(1),
+      &__slide:nth-child(3){
+      display: none;
+    }
+ }
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+.price-slider{
+    .slider-control{
+    display: none;
+    }
+    background-color: #f2f2f2;
+
+      &__slide:nth-child(1),
+      &__slide:nth-child(3){
+      display: block;
+    }
+
+      &__wrapper{
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       flex-wrap: wrap;
+      }
+
+        &__slide:nth-child(1){
+          width: 44.1vw;
+
+          .tariff{
+            float: right;
+            border: 0;
+            border-top-left-radius: 2px;
+            width: 22vw;
+
+            &__table{
+            border-right: 0;
+            position: relative;
+
+               &:after{
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 21.57vw;
+                width:2px;
+                height: 139px;
+                background-color: #e5e5e5;
+               }
+                td{
+              padding: 7px 18px 7px 3%;
+              }
+            }
+          }
+      }
+
+        &__slide:nth-child(2){
+          width: 156px;
+
+         .tariff{
+          width: 152px;
+
+          &__table td{
+           font-size: 0;
+          }
+       }
+     }
+
+        &__slide:nth-child(3){
+          width: 154px;
+
+          .tariff{
+          width: 154px;
+          border: 0;
+          border-top-right-radius: 2px;
+
+          &__table{
+          border-left: 0;
+          td{
+           font-size: 0;
+          }
+        }
+       }
+     }
+}
+ .tariff{
+  &__flag{
+    top: 6.5px;
+    left: -23px;
+    width: 86px;
+    height: 27px;
+    .backgr(url("@{base-url}flag-700.png"));
+  }
+
+  &__name{
+    .font(@white, 16px, 600, 30px);
+    padding-top: 11px;
+  }
+
+  &__price{
+    .font(@white, 18px, @thin, 30px);
+    padding-bottom: 8px;
+  }
+
+  &__table{
+      background-color: @white;
+      box-shadow: none;
+      border-top: @t-border;
+
+          td{
+          padding: 7px 18px 7px 3%;
+          }
+    }
+
+  &__category{
+    .font(@navy, 14px, @regular, 30px);
+    text-transform: none;
+
+    &--check:after, &--cross:after{
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 62px;
+    }
+   }
+ }
 }
