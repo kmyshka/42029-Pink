@@ -1,49 +1,27 @@
 .intro{
   .t-center();
-   .backgr(url("@{base-url}iphone-hand-320.png"),  @imgpos-y: 27vw);
-   background-size: auto 89vw;
+  .backgr(url("@{base-url}iphone-hand-320.png"), @imgpos-y: 85px);
+   background-size: auto;
 
   &__slogan{
-    .font(@font-size: 7.5vw; @font-weight: @thin; @line-height: 8.75vw);
-    .margpad(0 auto);
-    margin-bottom: 98vw;
-    padding: 0 14%;
+    width: 230px;
+    .font(@font-size: 24px; @font-weight: @thin; @line-height: 28px);
+    .margpad(0 auto 315px);
   }
 }
 
-@media (min-width: 300px) and (max-width: 320px) {
+
+@media (min-width: 700px) {
   .intro{
-    .backgr(url("@{base-url}iphone-hand-320.png"), @imgpos-y: 85px);
-
-    &__slogan{
-      width: 230px;
-      .font(@font-size: 24px; @font-weight: @thin; @line-height: 28px);
-      .margpad(0 auto 315px);
-    }
-  }
-}
-
-@media (min-width: 480px) and (max-width: 600px) {
-  .intro{
-    .backgr(url("@{base-url}iphone-hand-320@2x.png"), @imgpos-y: 143px);
-       background-size: auto 435px;
-
-      &__slogan{
-        margin-bottom: 475px;
-    }
-  }
-}
-
-@media (min-width: 600px) and (max-width: 700px) {
-  .intro{
+    padding: 3px 5.7% 0 5.7%;
     .backgr(url("@{base-url}iphone-hand-700@1x.png"), @imgpos-x: 90% , @imgpos-y: 100%);
-    background-size: auto  77vw;
+    background-size: auto;
 
     &__slogan{
       font-size: 40px;
       line-height: 47px;
       width: 190px;
-      margin: 0 0 0 13.5%;
+      margin: 0 0 0 56px;
       padding: 20px 0 0;
     }
   }

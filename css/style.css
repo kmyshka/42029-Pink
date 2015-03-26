@@ -5,13 +5,12 @@
 .page-header {
   position: relative;
   background: rgba(0, 0, 0, 0.3);
-  padding: 5.7% 0 5.4%;
-  margin-bottom: 7.2%;
+  padding: 20px 0 17px;
+  margin-bottom: 23px;
 }
 .page-header__wrapper {
-  padding: 0;
-  margin: 0 auto;
-  width: 87.5%;
+  width: auto;
+  padding: 0 20px;
 }
 .page-header__wrapper:after {
   content: "";
@@ -28,30 +27,16 @@
   background-size: auto;
   float: right;
   width: 50px;
-  height: 25px;
+  height: 29px;
 }
 .page-header__icon--close {
   float: right;
   width: 24px;
-  height: 24px;
+  height: 29px;
   background: url("../img/menu-cross.svg") no-repeat 0 50%;
   background-size: auto;
 }
-@media (min-width: 300px) and (max-width: 320px) {
-  .page-header {
-    padding: 20px 0 17px;
-    margin-bottom: 23px;
-  }
-  .page-header__wrapper {
-    width: auto;
-    padding: 0 20px;
-  }
-  .page-header__icon,
-  .page-header--close {
-    height: 29px;
-  }
-}
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .page-header {
     padding: 27px 0 38px;
     margin-bottom: 74px;
@@ -70,31 +55,28 @@ html {
 }
 body {
   padding: 0;
-  margin: 0;
-}
-.layout {
-  max-width: 1200px;
-  min-width: 320px;
-  background: url("../img/background-320@2x.jpg") no-repeat 50% 0;
-  background-size: auto;
-  padding: 0;
   margin: 0 auto;
 }
-@media (max-width: 320px) and (min-width: 300px) {
-  .layout {
-    background: url("../img/background-320.jpg") no-repeat 50% 0;
-    background-size: auto;
-  }
+.layout {
+  background: url("../img/background-320@2x.jpg") no-repeat 50% 0;
+  background-size: auto;
+  background-size: auto 460px;
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
 }
-@media (min-width: 480px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .layout {
     background: url("../img/background-700@2x.jpg") no-repeat 50% 0;
     background-size: auto;
     background-size: auto 729px;
+    max-width: 960px;
   }
 }
 .page-header__nav {
-  display: block;
+  display: none;
   position: absolute;
   background: #283645;
   top: 0;
@@ -106,8 +88,8 @@ body {
 .page-header__nav .page-header__navwrapper {
   padding: 0;
   margin: 0 auto;
-  width: 87.5%;
-  padding: 5.7% 0 5.4%;
+  width: auto;
+  padding: 20px 20px 17px;
 }
 .page-header__nav .page-header__navwrapper:after {
   content: "";
@@ -135,13 +117,7 @@ body {
 .menu-list__item:nth-of-type(1) a {
   border-top: 1px solid #000000;
 }
-@media (min-width: 300px) and (max-width: 320px) {
-  .page-header__nav .page-header__navwrapper {
-    width: auto;
-    padding: 20px 20px 17px;
-  }
-}
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .page-header__nav .page-header__navwrapper {
     width: auto;
     padding: 27px 40px 38px;
@@ -149,56 +125,29 @@ body {
 }
 .intro {
   text-align: center;
-  background: url("../img/iphone-hand-320.png") no-repeat 0 27vw;
+  background: url("../img/iphone-hand-320.png") no-repeat 0 85px;
   background-size: auto;
-  background-size: auto 89vw;
 }
 .intro__slogan {
+  width: 230px;
   color: #ffffff;
-  font-size: 7.5vw;
+  font-size: 24px;
   font-weight: 300;
-  line-height: 8.75vw;
+  line-height: 28px;
   padding: 0;
-  margin: 0 auto;
-  margin-bottom: 98vw;
-  padding: 0 14%;
+  margin: 0 auto 315px;
 }
-@media (min-width: 300px) and (max-width: 320px) {
+@media (min-width: 700px) {
   .intro {
-    background: url("../img/iphone-hand-320.png") no-repeat 0 85px;
-    background-size: auto;
-  }
-  .intro__slogan {
-    width: 230px;
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 28px;
-    padding: 0;
-    margin: 0 auto 315px;
-  }
-}
-@media (min-width: 480px) and (max-width: 600px) {
-  .intro {
-    background: url("../img/iphone-hand-320@2x.png") no-repeat 0 143px;
-    background-size: auto;
-    background-size: auto 435px;
-  }
-  .intro__slogan {
-    margin-bottom: 475px;
-  }
-}
-@media (min-width: 600px) and (max-width: 700px) {
-  .intro {
+    padding: 3px 5.7% 0 5.7%;
     background: url("../img/iphone-hand-700@1x.png") no-repeat 90% 100%;
     background-size: auto;
-    background-size: auto  77vw;
   }
   .intro__slogan {
     font-size: 40px;
     line-height: 47px;
     width: 190px;
-    margin: 0 0 0 13.5%;
+    margin: 0 0 0 56px;
     padding: 20px 0 0;
   }
 }
@@ -240,36 +189,14 @@ body {
   padding: 0;
   margin: 0;
   color: #ffffff;
-  font-size: 4.3vw;
+  font-size: 14px;
   font-weight: 300;
-  line-height: 7.5vw;
+  line-height: 24px;
 }
-@media (min-width: 300px) and (max-width: 320px) {
-  .app-download {
-    background-color: #1d2631;
-    text-align: center;
-    padding: 28px 0 32px;
-  }
-  .app-download__wrapper {
-    width: 280px;
-  }
-  .app-download__links {
-    padding: 0;
-    margin: 0 auto 22px;
-  }
-  .app-download__text {
-    padding: 0;
-    margin: 0;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 24px;
-  }
-}
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .app-download {
     background-color: transparent;
-    width: 360px;
+    width: 300px;
     padding: 33px 0 107px;
   }
   .app-download__wrapper {
@@ -309,56 +236,39 @@ body {
 .view-btn:active {
   color: rgba(210, 40, 86, 0.3);
 }
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .view-btn {
     margin-bottom: 44px;
   }
 }
 .app-info {
   text-align: center;
-  padding: 5% 0 0;
-  background-image: linear-gradient(-6deg, rgba(242, 242, 242, 0.9) 30%, rgba(242, 242, 242, 0.9) 77%, #ffffff 77%);
+  padding: 16px 0 0;
+  background-image: linear-gradient(-6deg, #f2f2f2 30%, #f2f2f2 77%, #ffffff 77%);
 }
 .app-info__wrapper {
+  width: 87.5%;
   padding: 0;
   margin: 0 auto;
-  width: 88.5%;
 }
 .app-info__slogan {
   color: #283645;
-  font-size: 6.5vw;
+  font-size: 24px;
   font-weight: 300;
-  line-height: 8wv;
+  line-height: 28px;
 }
 .app-info__slogan:nth-of-type(2) {
-  margin-bottom: 34%;
+  margin-bottom: 110px;
 }
-@media (min-width: 300px) and (max-width: 320px) {
-  .app-info {
-    padding: 16px 0 0;
-    background-image: linear-gradient(-6deg, rgba(242, 242, 242, 0.9) 30%, rgba(242, 242, 242, 0.9) 77%, #ffffff 77%);
-  }
-  .app-info__wrapper {
-    width: 280px;
-  }
-  .app-info__slogan {
-    color: #283645;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 28px;
-  }
-  .app-info__slogan:nth-of-type(2) {
-    margin-bottom: 110px;
-  }
-}
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .app-info {
     padding: 50px 0 0;
-    background-image: linear-gradient(-6deg, rgba(242, 242, 242, 0.9) 30%, rgba(242, 242, 242, 0.9) 62%, #ffffff 62%);
+    background-image: linear-gradient(-6deg, #f2f2f2 30%, #f2f2f2 62%, #ffffff 62%);
   }
   .app-info__wrapper {
     background: url("../img/iphone-smile-320@1x.png") no-repeat 0 100%;
     background-size: auto;
+    width: 620px;
   }
   .app-info__slogan {
     color: #283645;
@@ -374,18 +284,18 @@ body {
   }
 }
 .features {
-  padding: 0 0 91.8%;
+  padding: 0 0 294px;
   margin: 0;
   color: #283645;
-  font-size: 4vw;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 7vw;
+  line-height: 24px;
   list-style: none;
   background: url("../img/iphone-smile-320@1x.png") no-repeat 50% 100%;
-  background-size: 48vw auto;
+  background-size: auto 280px;
 }
 .features__item {
-  margin-bottom: 11%;
+  margin-bottom: 35px;
 }
 .features__item p {
   padding: 0;
@@ -393,33 +303,12 @@ body {
 }
 .features__title {
   color: #000000;
-  font-size: 5vw;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 7vw;
-  margin-bottom: 4%;
+  line-height: 24px;
+  margin-bottom: 10px;
 }
-@media (min-width: 300px) and (max-width: 320px) {
-  .features {
-    padding: 0 0 294px;
-    margin: 0;
-    color: #283645;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-    background-size: 158px auto;
-  }
-  .features__item {
-    margin-bottom: 35px;
-  }
-  .features__title {
-    color: #000000;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 24px;
-    margin-bottom: 10px;
-  }
-}
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .features {
     text-align: left;
     width: 50.5%;
@@ -448,8 +337,8 @@ body {
   }
 }
 .review-slider {
-  background-image: linear-gradient(-5deg, rgba(242, 242, 242, 0.9) 5%, rgba(242, 242, 242, 0.9) 19%, #ffffff 19%);
-  padding-bottom: 120px;
+  background-image: linear-gradient(-5deg, #f2f2f2 5%, #f2f2f2 19%, #ffffff 19%);
+  padding-bottom: 134px;
 }
 .review-slider .slider-control__toggle {
   background: #bec2c7;
@@ -461,50 +350,27 @@ body {
 }
 .review {
   text-align: center;
-  padding: 14% 0 9.4%;
+  padding: 45px 0 0;
 }
 .review__name-reviewer {
   color: #000000;
-  font-size: 5.6vw;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 9.3vw;
-  margin-bottom: 4.6%;
+  line-height: 30px;
+  margin-bottom: 15px;
 }
 .review__comment-reviewer {
   color: #283645;
-  font-size: 4.3vw;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 9.3vw;
+  line-height: 30px;
   padding: 0;
-  margin: 0 6.25%;
+  margin: 0 20px;
 }
 .review__prof-reviewer {
   display: none;
 }
-@media (min-width: 300px) and (max-width: 320px) {
-  .review-slider {
-    padding-bottom: 134px;
-  }
-  .review {
-    padding: 45px 0 0;
-  }
-  .review__name-reviewer {
-    color: #000000;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 30px;
-    margin-bottom: 15px;
-  }
-  .review__comment-reviewer {
-    color: #283645;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 30px;
-    padding: 0;
-    margin: 0 20px;
-  }
-}
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .review-slider {
     padding-bottom: 110px;
   }
@@ -530,7 +396,7 @@ body {
     font-weight: 400;
     line-height: 30px;
     padding: 0;
-    margin: 0 20px;
+    margin: 0 25px;
     margin-bottom: 35px;
   }
   .review__prof-reviewer {
@@ -544,29 +410,45 @@ body {
 }
 .contacts {
   text-align: center;
+  position: relative;
+  background: url("../img/map1.jpg") no-repeat 50% 100%;
+  background-size: auto;
   padding: 0;
-  background: none;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .contacts__wrapper {
   padding: 0;
   margin: 0 auto;
-  width: 88.5%;
+  width: 87.5%;
 }
 .contacts__slogan {
   color: #283645;
-  font-size: 7vw;
+  font-size: 24px;
   font-weight: 300;
-  line-height: 8vw;
-  margin-bottom: 10.6%;
+  line-height: 28px;
+  margin-bottom: 34px;
   padding: 0 20px;
 }
 .contacts__info {
-  padding: 0 0 32.5%;
+  padding: 0 0 200px;
   margin: 0;
   list-style: none;
 }
+.contacts__info:after {
+  content: "";
+  position: absolute;
+  bottom: 69px;
+  left: 50%;
+  margin-left: -18px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #d22856;
+  border: 10px solid #ffffff;
+}
 .contacts__item {
-  margin-bottom: 9.3%;
+  margin-bottom: 30px;
 }
 .contacts__title {
   color: #283645;
@@ -585,77 +467,23 @@ body {
   font-weight: 300;
   line-height: 28px;
 }
-@media (min-width: 300px) and (max-width: 320px) {
-  .contacts {
-    position: relative;
-    background: url("../img/map.jpg") no-repeat 0 100%;
-    background-size: contain;
-    padding: 0;
-    margin: 0 auto;
-  }
-  .contacts__wrapper {
-    width: 280px;
-  }
-  .contacts__slogan {
-    color: #283645;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 28px;
-    margin-bottom: 34px;
-  }
-  .contacts__info {
-    padding: 0 0 200px;
-    margin: 0;
-  }
-  .contacts__info:after {
-    content: "";
-    position: absolute;
-    bottom: 69px;
-    left: 122px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #d22856;
-    border: 10px solid #ffffff;
-  }
-  .contacts__item {
-    margin-bottom: 30px;
-  }
-  .contacts__title {
-    color: #283645;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 20px;
-    margin-bottom: 5px;
-  }
-  .contacts__phone,
-  .contacts__email,
-  .contacts__address {
-    padding: 0;
-    margin: 0;
-    color: #d22856;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 28px;
-  }
-  .contacts::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 160px solid transparent;
-    /* Прозрачные границы */
-    border-top: 28px solid #ffffff;
-    left: 0;
-    bottom: 14px;
-    z-index: 10;
-  }
+.contacts::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 160px solid transparent;
+  /* Прозрачные границы */
+  border-top: 28px solid #ffffff;
+  left: 0;
+  bottom: 14px;
+  z-index: 10;
 }
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .contacts {
     position: relative;
-    background: url("../img/map-700-1.jpg") no-repeat 0 100%;
-    background-size: auto;
+    background: url("../img/map-700-2.jpg") no-repeat 50% 100%;
+    background-size: auto 376px;
     padding: 50px 0 0;
   }
   .contacts__wrapper {
@@ -681,8 +509,9 @@ body {
   .contacts__info:after {
     content: "";
     position: absolute;
-    bottom: 144px;
-    left: 47%;
+    bottom: 148px;
+    left: 50%;
+    margin-left: -18px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -813,13 +642,7 @@ body {
   background: url("../img/yes.svg") no-repeat 0 0;
   background-size: auto;
 }
-@media (min-width: 300px) and (max-width: 320px) {
-  .price-slider__slide:nth-child(1),
-  .price-slider__slide:nth-child(3) {
-    display: none;
-  }
-}
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .price-slider {
     background-color: #f2f2f2;
   }
@@ -845,13 +668,13 @@ body {
             flex-wrap: wrap;
   }
   .price-slider__slide:nth-child(1) {
-    width: 44.1vw;
+    width: 308px;
   }
   .price-slider__slide:nth-child(1) .tariff {
     float: right;
     border: 0;
     border-top-left-radius: 2px;
-    width: 22vw;
+    width: 154px;
   }
   .price-slider__slide:nth-child(1) .tariff__table {
     border-right: 0;
@@ -861,7 +684,7 @@ body {
     content: "";
     position: absolute;
     top: 0;
-    right: 21.57vw;
+    right: 152px;
     width: 2px;
     height: 139px;
     background-color: #e5e5e5;
@@ -955,13 +778,13 @@ body {
 .research {
   display: none;
 }
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .research {
     display: block;
     margin-top: 57px;
   }
   .research__wrapper {
-    width: 88.5vw;
+    width: 620px;
     padding: 0;
     margin: 0 auto;
     background: url("../img/timer.png") no-repeat 0 0;
@@ -985,7 +808,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    width: 42.8vw;
+    width: 308px;
     text-align: left;
     margin: 0 0 10px;
   }
@@ -999,34 +822,29 @@ body {
 .page-footer {
   display: none;
 }
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .page-footer {
     display: block;
     padding: 36px 0;
     background: #ffffff;
   }
   .page-footer__wrapper {
-    padding: 0 40px;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    width: 88.5%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .page-footer__wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
   }
   .page-footer__logo {
     float: left;
-    width: 220px;
+    width: 31%;
   }
   .page-footer__contacts {
     float: left;
-    width: 180px;
+    width: 33%;
     font-size: 0;
     text-align: center;
   }
@@ -1052,10 +870,11 @@ body {
   }
   .page-footer__copyright {
     float: right;
-    width: 204px;
+    width: 34%;
     padding-left: 16px;
     font-size: 0;
     padding: 6px 0 6px;
+    text-align: right;
   }
   .page-footer__copyright img {
     vertical-align: middle;

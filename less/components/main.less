@@ -1,31 +1,26 @@
 html{
   font-family: 'Open Sans', sans-serif;
-
 }
 
 body{
-  .margpad();
-}
-
-.layout{
-  max-width: @x-desktop;
-  min-width: @x-mobile;
-  .backgr(url("@{base-url}background-320@2x.jpg"), @imgpos-x: 50%);
-  background-size: auto;
   .margpad(0 auto);
 }
 
-@media (max-width: 320px) and (min-width: 300px){
 .layout{
-  .backgr(url("@{base-url}background-320.jpg"), @imgpos-x: 50%);
-  }
+  .backgr(url("@{base-url}background-320@2x.jpg"), @imgpos-x: 50%);
+  background-size: auto 460px;
+  .margpad(0 auto);
+  min-width: @x-mobile;
+  border-left: 1px solid @black;
+  border-right: 1px solid @black;
 }
 
-@media (min-width: 480px) and (max-width: 700px) {
 
+@media (min-width: 700px) {
 .layout{
   .backgr(url("@{base-url}background-700@2x.jpg"), @imgpos-x: 50%);
   background-size: auto 729px;
+  max-width: 960px;
   }
 }
 

@@ -1,41 +1,24 @@
 .features{
-  .margpad(0, @padding: 0 0 91.8%);
-  .font(@navy, 4vw, @regular, 7vw);
+  .margpad(0, @padding: 0 0 294px);
+  .font(@navy, 14px, @regular, 24px);
   list-style: none;
   background: url("@{base-url}iphone-smile-320@1x.png") no-repeat 50% 100%;
-  background-size: 48vw auto;
+  background-size: auto 280px;
 
   &__item{
-  margin-bottom: 11%;
+    margin-bottom: 35px;
     p{
       .margpad();
     }
   }
 
   &__title{
-    .font(@black, 5vw, @bold, 7vw);
-    margin-bottom: 4%;
-  }
-}
-
-@media (min-width: 300px) and (max-width: 320px) {
-.features{
-  .margpad(0, @padding: 0 0 294px);
-  .font(@navy, 14px, @regular, 24px);
-  background-size: 158px auto;
-
-  &__item{
-  margin-bottom: 35px;
-  }
-
-  &__title{
     .font(@black, 18px, @bold, 24px);
     margin-bottom: 10px;
   }
- }
 }
 
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .features{
     text-align: left;
     width: 50.5%;

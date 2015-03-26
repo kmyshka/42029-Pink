@@ -2,28 +2,30 @@
       display: none;
    }
 
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 700px) {
   .page-footer{
       display: block;
       padding: 36px 0;
       background: @white;
 
       &__wrapper{
-        padding: 0 40px;
-        display: flex;
-       flex-direction: row;
-       justify-content: center;
-       flex-wrap: wrap;
+        width: 88.5%;
+        .margpad(0 auto);
+
+        &:after{
+          .clearboth();
         }
+      }
 
       &__logo{
         float: left;
-        width: 220px;
+        width: 31%;
+
       }
 
       &__contacts{
         float: left;
-        width: 180px;
+        width: 33%;
         font-size: 0;
         text-align: center;
       }
@@ -62,10 +64,11 @@
 
       &__copyright{
         float: right;
-        width: 204px;
+        width: 34%;
         padding-left: 16px;
         font-size: 0;
         padding: 6px 0 6px;
+        text-align: right;
 
         img{
           vertical-align: middle;
