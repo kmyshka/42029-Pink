@@ -3,14 +3,10 @@
   position: absolute;
   background: @navy;
   top: 0;
-  left: 0;
-  min-width: 320px;
-  max-width: 1200px;
-  width: 100%;
+  right: 0;
+  width: inherit;
 
-.page-header__navwrapper{
-    .margpad(0 auto);
-    width: auto;
+  .wrapper{
     padding: 20px 20px 17px;
 
     &:after{
@@ -22,6 +18,10 @@
 .menu-list{
     list-style: none;
     .margpad();
+
+      &:after{
+        .clearboth();
+      }
 
     &__item a{
     .link();
@@ -40,11 +40,61 @@
 
 @media (min-width: 700px) {
   .page-header__nav{
-  .page-header__navwrapper{
-    width: auto;
+  display: none;
+  .wrapper{
     padding: 27px 40px 38px;
    }
  }
+}
+
+@media (min-width: 1200px) {
+  .page-header{
+
+      .page-header__nav{
+    display: inline-block;
+    background: transparent;
+    width: 600px;
+    position: absolute;
+    top: 27px;
+    right: 14.8%;
+
+    .page-header__title{
+        display: none;
+    }
+
+    .wrapper{
+      position: relative;
+      width: 940px;
+      padding: 0;
+     }
+   }
+
+    .menu-list{
+
+    &__item a{
+    .font(@font-size: 18px, @line-height: 18px, @font-weight: @regular);
+    text-transform: capitalize;
+    background: transparent;
+    box-shadow: none;
+   }
+
+    &__item:nth-of-type(1) a{
+    border-top: 0px solid @black;
+    }
+
+    li{
+    float: left;
+    margin-right: 65px;
+
+        &:nth-child(4){
+          margin-right: 0
+        }
+    }
+
+   }
+
+
+  }
 }
 
 

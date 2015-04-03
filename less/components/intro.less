@@ -1,4 +1,13 @@
 .intro{
+  .wrapper{
+    padding: 0 0;
+    text-align: center;
+
+    &:after{
+      .clearboth();
+    }
+  }
+
   .t-center();
   .backgr(url("@{base-url}iphone-hand-320.png"), @imgpos-y: 85px);
    background-size: auto;
@@ -13,16 +22,40 @@
 
 @media (min-width: 700px) {
   .intro{
-    padding: 3px 5.7% 0 5.7%;
-    .backgr(url("@{base-url}iphone-hand-700@1x.png"), @imgpos-x: 90% , @imgpos-y: 100%);
+      .wrapper{
+    padding: 0 5.7vw;
+  }
+    text-align: center;
+    padding-top: 3px;
+    .backgr(url("@{base-url}iphone-hand-700@1x.png"), @imgpos-x: 80%);
     background-size: auto;
 
     &__slogan{
       font-size: 40px;
       line-height: 47px;
-      width: 190px;
-      margin: 0 0 0 56px;
+      width: 30.6%;
+      margin: 0 0 0 8%;
       padding: 20px 0 0;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro{
+      .wrapper{
+    padding: 0;
+  }
+    text-align: center;
+    padding-top: 3px;
+    .backgr(url("@{base-url}iphone-hand-1200@1x.png"), @imgpos-x: 80%, @imgpos-y: 24px);
+    background-size: auto;
+
+    &__slogan{
+      font-size: 50px;
+      line-height: 57px;
+      width: 31.9%;
+      margin: 0 0 0 0;
+      padding: 33px 0 0;
     }
   }
 }

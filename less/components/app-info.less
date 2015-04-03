@@ -3,12 +3,6 @@
    padding: 16px 0 0;
    background-image: linear-gradient(-6deg, @grey-b 30%, @grey-b 77%, #ffffff 77%);
 
-  &__wrapper{
-  width: 87.5%;
-  .margpad(0 auto);
-
-
-  }
 
   &__slogan{
     .font(@navy; 24px; @thin; 28px);
@@ -25,10 +19,8 @@
   padding: 50px 0 0;
   background-image: linear-gradient(-6deg, @grey-b  30%,  @grey-b  62%, @white 62%);
 
-  &__wrapper{
-  background: url("@{base-url}iphone-smile-320@1x.png") no-repeat 0 100%;
-  background-size: auto;
-  width: 620px;
+  .wrapper{
+    background: url("@{base-url}iphone-smile-320@1x.png") no-repeat 9.2% 100%;
   }
 
   &__slogan{
@@ -36,8 +28,29 @@
     .margpad();
 
     &:nth-of-type(2){
-      margin-bottom: 125px;
+      margin-bottom: 17.8%;
       padding: 0 100px;
+    }
+  }
+ }
+}
+
+@media (min-width: 1200px) {
+.app-info{
+  padding: 70px 0 0;
+  background-image: linear-gradient(-6deg, @grey-b  25%,  @grey-b  59%, @white 59%);
+
+    .wrapper{
+    background: none;
+  }
+
+  &__slogan{
+    .font(@navy; 50px; @thin; 58px);
+
+
+    &:nth-of-type(2){
+      margin-bottom: 8%;
+      padding: 0 240px;
     }
   }
  }

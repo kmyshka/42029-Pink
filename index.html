@@ -10,9 +10,10 @@
   <body>
     <div class="layout">
       <header class="page-header">
-        <div class="page-header__wrapper">
+        <div class="wrapper">
           <div class="page-header__title"><a href="#">
             <picture>
+              <source media="(min-width: 1200px)" srcset="img/Pink-logo-1200@1x.png">
               <source media="(min-width: 700px)" srcset="img/Pink-logo-700.png">
               <img src="img/Pink-logo-320.png">
             </picture></a>
@@ -20,7 +21,7 @@
           <a href="#" class="page-header__icon"></a>
         </div>
         <div class="page-header__nav">
-          <div class="page-header__navwrapper">
+          <div class="wrapper">
             <div class="page-header__title"><a href="#">
               <picture>
                 <source media="(min-width: 700px)" srcset="img/Pink-logo-700.png">
@@ -39,23 +40,23 @@
       </header>
       <div class="main-page">
         <section class="intro">
-          <h1 class="intro__slogan">Взгляните на жизнь иначе!</h1>
-          <div class="app-download">
-            <div class="app-download__wrapper">
-              <a class="view-btn  view-btn--download" href="#">Скачать приложение</a>
-              <div class="app-download__links">
-                <a class="app-download__link  app-download__link--apple" href="#">Apple</a>
-                <a class="app-download__link  app-download__link--android" href="#">Android</a>
-                <a class="app-download__link  app-download__link--windows" href="#">Windowsphone</a>
-              </div>
-              <p class="app-download__text">Доступно для iPhone, iPad, Android, Windows phone,
-                Mac OS, Windows 8
-              </p>
+          <div class="wrapper">
+            <h1 class="intro__slogan">Взгляните на жизнь иначе!</h1>
+            <div class="app-download">
+                <a class="view-btn  view-btn--download" href="#">Скачать приложение</a>
+                <div class="app-download__links">
+                  <a class="app-download__link  app-download__link--apple" href="#">Apple</a>
+                  <a class="app-download__link  app-download__link--android" href="#">Android</a>
+                  <a class="app-download__link  app-download__link--windows" href="#">Windowsphone</a>
+                </div>
+                <p class="app-download__text">Доступно для iPhone, iPad, Android, Windows phone,
+                  Mac OS, Windows 8
+                </p>
             </div>
           </div>
         </section>
         <section class="app-info">
-          <div class="app-info__wrapper">
+          <div class="wrapper">
             <p class="app-info__slogan">Устали от серости мегаполиса?</p>
             <p class="app-info__slogan">Нам есть, что вам предложить!</p>
             <ul class="features">
@@ -79,25 +80,25 @@
           </div>
         </section>
         <section class="research">
-          <div class="research__wrapper">
+          <div class="wrapper">
             <div class="research__info">
               <p class="research__title">Эффект на 24 часа!</p>
-              <p class="research__text">Британские ученые провели исследования и доказали,
-              что положительный эффект<br> от использования приложения длится целые сутки!</p>
+              <p class="research__text">Британские ученые провели исследования и доказали,<br>
+                  что положительный эффект от использования приложения длится целые сутки!</p>
               <a class="research__link" href="#">Узнать больше об исследовании</a>
             </div>
           </div>
         </section>
         <section class="review-slider">
-          <div class="review-slider__wrapper">
+          <div class="wrapper">
             <div class="review-slider__slide">
               <div class="review">
                 <p class="review__prof-reviewer">25 лет, водитель трамвая</p>
                 <div class="review__name-reviewer">Николай Петров</div>
                 <blockquote class="review__comment-reviewer">
-                  &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
+                  Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
                   серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной
-                  фотографии!&#187;
+                  фотографии!
                 </blockquote>
               </div>
             </div>
@@ -109,58 +110,120 @@
           </div>
         </section>
         <section class="price-slider">
-          <div class="price-slider__wrapper">
-              <div class="price-slider__slide">
-              <div class="tariff">
-                <p class="tariff__name">База</p>
-                <p class="tariff__price">1,99 USD</p>
-              </div>
-                <table class="tariff__table">
-                  <tr>
-                    <td class="tariff__category  tariff__category--check">Розовый фильтр</td>
-                  </tr>
-                  <tr>
-                    <td class="tariff__category  tariff__category--cross">Смайлики</td>
-                  </tr>
-                  <tr>
-                    <td class="tariff__category  tariff__category--cross">Комментарии</td>
-                  </tr>
-                </table>
+          <div class="wrapper">
+            <div class="price-slider__slide">
+              <table class="tariff">
+                <tr>
+                  <th></th>
+                  <th class="tariff__caption">
+                    <p class="tariff__name">База</p>
+                    <p class="tariff__price">1,99 USD</p>
+                  </th>
+                  <th class="tariff__caption">
+                    <div class="tariff__flag">Хит</div>
+                    <p class="tariff__name">Стандарт</p>
+                    <p class="tariff__price">3,99 USD</p>
+                  </th>
+                  <th class="tariff__caption">
+                    <p class="tariff__name">Анлим</p>
+                    <p class="tariff__price">9,99 USD</p>
+                  </th>
+                </tr>
+                <tr>
+                  <td class="tariff__category">Розовый фильтр</td>
+                  <td class="tariff__category  tariff__category--check">Розовый фильтр</td>
+                  <td class="tariff__category  tariff__category--check">Розовый фильтр</td>
+                  <td class="tariff__category  tariff__category--check">Розовый фильтр</td>
+                </tr>
+                <tr>
+                  <td class="tariff__category">Смайлики</td>
+                  <td class="tariff__category  tariff__category--cross">Смайлики</td>
+                  <td class="tariff__category  tariff__category--check">Смайлики</td>
+                  <td class="tariff__category  tariff__category--check">Смайлики</td>
+                </tr>
+                <tr>
+                  <td class="tariff__category">Комментарии</td>
+                  <td class="tariff__category  tariff__category--cross">Комментарии</td>
+                  <td class="tariff__category  tariff__category--cross">Комментарии</td>
+                  <td class="tariff__category  tariff__category--check">Комментарии</td>
+                </tr>
+              </table>
             </div>
             <div class="price-slider__slide">
-              <div class="tariff">
-                <div class="tariff__flag">Хит</div>
-                <p class="tariff__name">Стандарт</p>
-                <p class="tariff__price">3,99 USD</p>
-              </div>
-                <table class="tariff__table">
-                  <tr>
-                    <td class="tariff__category  tariff__category--check">Розовый фильтр</td>
-                  </tr>
-                  <tr>
-                    <td class="tariff__category  tariff__category--check">Смайлики</td>
-                  </tr>
-                  <tr>
-                    <td class="tariff__category  tariff__category--cross">Комментарии</td>
-                  </tr>
-                </table>
+              <table class="tariff">
+                <tr>
+                  <th class="tariff__caption"></th>
+                  <th class="tariff__caption">
+                    <p class="tariff__name">База</p>
+                    <p class="tariff__price">1,99 USD</p>
+                  </th>
+                  <th class="tariff__caption">
+                    <div class="tariff__flag">Хит</div>
+                    <p class="tariff__name">Стандарт</p>
+                    <p class="tariff__price">3,99 USD</p>
+                  </th>
+                  <th class="tariff__caption">
+                    <p class="tariff__name">Анлим</p>
+                    <p class="tariff__price">9,99 USD</p>
+                  </th>
+                </tr>
+                <tr>
+                  <td class="tariff__category">Розовый фильтр</td>
+                  <td class="tariff__category  tariff__category--check">Розовый фильтр</td>
+                  <td class="tariff__category  tariff__category--check">Розовый фильтр</td>
+                  <td class="tariff__category  tariff__category--check">Розовый фильтр</td>
+                </tr>
+                <tr>
+                  <td class="tariff__category">Смайлики</td>
+                  <td class="tariff__category  tariff__category--cross">Смайлики</td>
+                  <td class="tariff__category  tariff__category--check">Смайлики</td>
+                  <td class="tariff__category  tariff__category--check">Смайлики</td>
+                </tr>
+                <tr>
+                  <td class="tariff__category">Комментарии</td>
+                  <td class="tariff__category  tariff__category--cross">Комментарии</td>
+                  <td class="tariff__category  tariff__category--cross">Комментарии</td>
+                  <td class="tariff__category  tariff__category--check">Комментарии</td>
+                </tr>
+              </table>
             </div>
             <div class="price-slider__slide">
-              <div class="tariff">
-                <p class="tariff__name">Анлим</p>
-                <p class="tariff__price">9,99 USD</p>
-              </div>
-                <table class="tariff__table">
-                  <tr>
-                    <td class="tariff__category  tariff__category--check">Розовый фильтр</td>
-                  </tr>
-                  <tr>
-                    <td class="tariff__category  tariff__category--check">Смайлики</td>
-                  </tr>
-                  <tr>
-                    <td class="tariff__category  tariff__category--check">Комментарии</td>
-                  </tr>
-                </table>
+              <table class="tariff">
+                <tr>
+                  <th class="tariff__caption"></th>
+                  <th class="tariff__caption">
+                    <p class="tariff__name">База</p>
+                    <p class="tariff__price">1,99 USD</p>
+                  </th>
+                  <th class="tariff__caption">
+                    <div class="tariff__flag">Хит</div>
+                    <p class="tariff__name">Стандарт</p>
+                    <p class="tariff__price">3,99 USD</p>
+                  </th>
+                  <th class="tariff__caption">
+                    <p class="tariff__name">Анлим</p>
+                    <p class="tariff__price">9,99 USD</p>
+                  </th>
+                </tr>
+                <tr>
+                  <td class="tariff__category">Розовый фильтр</td>
+                  <td class="tariff__category  tariff__category--check">Розовый фильтр</td>
+                  <td class="tariff__category  tariff__category--check">Розовый фильтр</td>
+                  <td class="tariff__category  tariff__category--check">Розовый фильтр</td>
+                </tr>
+                <tr>
+                  <td class="tariff__category">Смайлики</td>
+                  <td class="tariff__category  tariff__category--cross">Смайлики</td>
+                  <td class="tariff__category  tariff__category--check">Смайлики</td>
+                  <td class="tariff__category  tariff__category--check">Смайлики</td>
+                </tr>
+                <tr>
+                  <td class="tariff__category">Комментарии</td>
+                  <td class="tariff__category  tariff__category--cross">Комментарии</td>
+                  <td class="tariff__category  tariff__category--cross">Комментарии</td>
+                  <td class="tariff__category  tariff__category--check">Комментарии</td>
+                </tr>
+              </table>
             </div>
             <div class="slider-control">
               <i class="slider-control__toggle"></i>
@@ -170,7 +233,7 @@
           </div>
         </section>
         <section class="contacts">
-          <div class="contacts__wrapper">
+          <div class="wrapper">
             <p class="contacts__slogan">Остались вопросы? Свяжитесь с нами!</p>
             <ul class="contacts__info">
               <li class="contacts__item">
@@ -187,12 +250,14 @@
               </li>
             </ul>
           </div>
+          <div class="contacts__map"></div>
         </section>
       </div>
       <footer class="page-footer">
-        <div class="page-footer__wrapper">
+        <div class="wrapper">
           <div class="page-footer__logo"><a href="#">
             <picture>
+              <source media="(min-width: 1200px)" srcset="img/Pink-logofooter-1200.png">
               <source media="(min-width: 700px)" srcset="img/Pink-logofooter-700.png">
               <img src="img/Pink-logo-320.png">
             </picture></a>

@@ -5,13 +5,10 @@
 @media (min-width: 700px) {
   .page-footer{
       display: block;
-      padding: 36px 0;
+      padding: 38px 0;
       background: @white;
 
-      &__wrapper{
-        width: 88.5%;
-        .margpad(0 auto);
-
+      .wrapper{
         &:after{
           .clearboth();
         }
@@ -20,7 +17,6 @@
       &__logo{
         float: left;
         width: 31%;
-
       }
 
       &__contacts{
@@ -52,11 +48,9 @@
           &--tw{
              .backgr(url("@{base-url}twitter.svg"));
           }
-
           &--fb{
              .backgr(url("@{base-url}facebook.svg"));
           }
-
           &--you{
              .backgr(url("@{base-url}youtube.svg"));
           }
@@ -80,8 +74,22 @@
           vertical-align: middle;
         }
      }
-
   }
-
 }
 
+
+@media (min-width: 1200px) {
+  .page-footer{
+      display: block;
+      padding: 73px 0;
+
+
+    &__copyright{
+
+        &-sign{
+          .font(@navy, 18px, @regular, 18px);
+        }
+     }
+ }
+
+}

@@ -3,11 +3,6 @@
   .t-center();
   padding: 28px 0 32px;
 
-  &__wrapper{
-    .margpad(0 auto);
-    width: 87.5%;
-  }
-
   &__links{
     .margpad(0 auto 22px);
     font-size: 0;
@@ -42,7 +37,7 @@
     }
 }
   &__text{
-    .margpad();
+    .margpad(0, @padding: 0 20px);
     .font(@font-weight: @thin; @line-height: 24px);
   }
 }
@@ -52,21 +47,31 @@
 @media(min-width: 700px) {
 .app-download{
    background-color: transparent;
-   width: 300px;
+   width: 42.8%;
    padding: 33px 0 107px;
-
-  &__wrapper{
-     width: 300px;
-  }
 
   &__links{
     .margpad(0 auto 36px);
   }
 
   &__text{
+    padding: 0;
     .font(@font-size: 18px; @font-weight: @thin; @line-height: 24px);
   }
 }
 }
+
+@media(min-width: 1200px) {
+.app-download{
+    width: 300px;
+   padding: 58px 0 123px;
+
+      &__links{
+    .margpad(0 auto 57px);
+  }
+
+  }
+}
+
 
 
