@@ -1,0 +1,99 @@
+.page-header{
+  position: relative;
+.bg-transp(black, 0.3);
+  padding: 20px 0 17px;
+  margin-bottom: 23px;
+
+  .wrapper{
+    &:after{
+    .clearboth();
+    }
+  }
+
+  &__title{
+    float: left;
+    width: 74px;
+    height: 24px;
+    .backgr(url("@{base-url}Pink-logo-320.png"));
+  }
+
+  &__icon{
+      .backgr(url("@{base-url}burger.svg"), @imgpos-y: 50%);
+    float: right;
+    width: 50px;
+    height: 29px;
+
+    &:hover{
+      .backgr(url("@{base-url}burger--hover.svg"), @imgpos-y: 50%);
+    }
+
+    &:active{
+      .backgr(url("@{base-url}burger--act.svg"), @imgpos-y: 50%);
+    }
+
+   &--close{
+    float: right;
+    width: 24px;
+    height: 29px;
+    .backgr(url("@{base-url}menu-cross.svg"), @imgpos-y: 50%);
+
+
+      &:hover{
+        .backgr(url("@{base-url}menu-cross-hov.svg"), @imgpos-y: 50%);
+      }
+
+      &:active{
+        .backgr(url("@{base-url}menu-cross-act.svg"), @imgpos-y: 50%);
+      }
+    }
+  }
+}
+
+
+@media (min-width: 700px) {
+.page-header{
+  padding: 27px 0 38px;
+  margin-bottom: 74px;
+
+  &__title{
+    width: 145px;
+    height: 40px;
+    .backgr(url("@{base-url}Pink-logo-700.png"));
+    background-size: 145px auto;
+
+    &:hover{
+      .backgr(url("@{base-url}Pink-logo-700-hover.png"));
+    }
+
+    &:active{
+      .backgr(url("@{base-url}Pink-logo-700-active.png"));
+    }
+
+  }
+
+    &__icon, &--close{
+    height: 45px;
+   }
+
+  }
+}
+
+
+
+@media (min-width: 1200px) {
+.page-header{
+  padding: 27px 0 38px;
+  margin-bottom: 74px;
+
+  &__title{
+    width: 145px;
+    height: 40px;
+    .backgr(url("@{base-url}Pink-logo-1200.png"));
+  }
+
+    &__icon, &--close{
+    display: none;
+   }
+  }
+
+}

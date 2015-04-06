@@ -1,0 +1,154 @@
+  .page-footer{
+      display: none;
+   }
+
+@media (min-width: 700px) {
+  .page-footer{
+      display: block;
+      padding: 38px 0;
+      background: @white;
+
+      &__glukhanko-logo{
+        display: inline-block;
+        width: 26px;
+        height: 30px;
+        vertical-align: middle;
+        .backgr(url("@{base-url}glukhanko.svg"));
+        background-size: 26px auto;
+
+        &:hover{
+        .backgr(url("@{base-url}glukhanko-hover.svg"));
+        background-size: 26px auto;
+        }
+
+        &:active{
+        .backgr(url("@{base-url}glukhanko-active.svg"));
+        background-size: 26px auto;
+        }
+    }
+
+      &__htmlacademy-logo{
+        display: inline-block;
+        width: 26px;
+        height: 34px;
+        vertical-align: middle;
+        background: url("../img/htmlacademy.svg") no-repeat 0 0;
+        background-size: 26px auto;
+
+         &:hover{
+        background: url("../img/htmlacademy-hover.svg") no-repeat 0 0;
+        background-size: 26px auto;
+        }
+
+        &:active{
+        background: url("../img/htmlacademy-active.svg") no-repeat 0 0;
+        background-size: 26px auto;
+        }
+    }
+
+      &__logo{
+        float: left;
+        width: 31%;
+        height: 40px;
+        background: url("../img/Pink-logofooter-700.png") no-repeat 0 0;
+        background-size: 145px auto;
+
+        &:hover{
+         background: url("../img/Pink-logofooter-700-hover.png") no-repeat 0 0;
+        }
+
+         &:active{
+         background: url("../img/Pink-logofooter-700-active.png") no-repeat 0 0;
+        }
+     }
+
+      &__contacts{
+        float: left;
+        width: 33%;
+        font-size: 0;
+        text-align: center;
+      }
+
+      &__link{
+          display: inline-block;
+          width: 45px;
+          height: 45px;
+          border: 3px solid #e9ebec;
+          border-radius: 50%;
+          margin-right: 12px;
+
+          &:hover{
+            border: 3px solid @navy;
+          }
+
+          &:active{
+            border: 3px solid @navy;
+            opacity: 0.1;
+          }
+
+          &:last-child{
+            margin-right: 0;
+          }
+
+           .backgr(@url: none;
+          @imgrepeat: no-repeat;
+          @imgpos-x: 50%;
+          @imgpos-y: 50%){
+           background: @arguments;
+          }
+
+          &--tw{
+            .backgr(url("@{base-url}twitter.svg"));
+          }
+          &--fb{
+            .backgr(url("@{base-url}facebook.svg"));
+          }
+          &--you{
+            .backgr(url("@{base-url}youtube.svg"));
+          }
+      }
+
+
+      &__copyright{
+        float: right;
+        width: 33%;
+        padding-left: 16px;
+        font-size: 0;
+        padding: 6px 0 6px;
+        text-align: right;
+
+        &-sign{
+          .font(@navy, 14px, @regular, 18px);
+          margin: 0 15px;
+          vertical-align: middle;
+        }
+     }
+  }
+
+    .page-footer .wrapper:after{
+          .clearboth();
+        }
+}
+
+
+@media (min-width: 1200px) {
+  .page-footer{
+      display: block;
+      padding: 73px 0;
+
+      &__logo{
+        float: left;
+        width: 31%;
+        height: 40px;
+        background: url("../img/Pink-logofooter-1200.png") no-repeat 0 0;
+        background-size: 145px auto;
+     }
+
+    &__copyright{
+        &-sign{
+          .font(@navy, 18px, @regular, 18px);
+        }
+     }
+ }
+
+}

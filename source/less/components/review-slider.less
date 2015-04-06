@@ -1,0 +1,162 @@
+.review-slider{
+  background-image: linear-gradient(-5deg, @grey-b  5%,  @grey-b  19%, @white 19%);
+  padding-bottom: 134px;
+
+  .slider-control{
+    &__toggle{
+      background: @grey-con;
+      border: 3px solid @white;
+
+        &--active{
+          .toggle-act();
+        }
+    }
+  }
+}
+
+.review{
+  text-align: center;
+   padding: 45px 0 0;
+
+  &__name-reviewer{
+    .font(@black, 18px, @bold, 30px);
+    margin-bottom: 15px;
+  }
+
+  &__comment-reviewer{
+      .font(@navy, 14px, @regular, 30px);
+      .margpad();
+      text-align: center;
+  }
+
+      &__prof-reviewer{
+      display: none;
+    }
+}
+
+
+@media (min-width: 700px) {
+  .review-slider{
+    padding-bottom: 110px;
+  }
+
+  .review{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 65px 0 0;
+
+    &__name-reviewer{
+      .font(@black, 20px, @bold, 30px);
+      margin-bottom: 5px;
+    }
+
+    &__comment-reviewer{
+      .font(@navy, 18px, @regular, 30px);
+      margin-bottom: 35px;
+    }
+
+        &__prof-reviewer{
+      display: block;
+      .font(@navy, 14px, @regular, 30px);
+      margin: 0;
+    }
+
+
+        blockquote:before {
+        color: @navy;
+        content: "\AB"; /* Непечатаемый символ слева */
+        font-size: 18px;
+        line-height: 30px;
+        margin-right: -2px;
+    }
+
+    blockquote:after {
+        color: @navy;
+        content: "\BB"; /* Непечатаемый символ справа */
+        font-size: 18px;
+        line-height: 30px;
+        margin-left: -2px;
+    }
+
+    blockquote > p:first-child {
+        display: inline;
+    }
+
+   }
+}
+
+
+@media (min-width: 1200px) {
+  .review-slider{
+    background-image: linear-gradient(-5deg, @grey-b  5%,  @grey-b  23%, @white 23%);
+    position: relative;
+    padding-bottom: 150px;
+
+    &:before{
+      position: absolute;
+      content: "";
+      .backgr(url("@{base-url}quotes.svg"));
+      width: 79px;
+      height: 64px;
+      left: 50%;
+      top: -54px;
+      margin-left: -10px;
+    }
+
+      .slider-control{
+        display: none;
+        }
+
+  }
+
+  .review{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 65px 0 0;
+
+
+        blockquote:before,
+        blockquote:after{
+        color: transparent;
+        }
+
+    &__name-reviewer{
+      .font(@black, 24px, @bold, 30px);
+      margin-bottom: 5px;
+    }
+
+    &__comment-reviewer{
+      position: relative;
+      margin-bottom: 35px;
+      padding: 0 120px;
+
+          &:before{
+          position: absolute;
+          content: "";
+          .backgr(url("@{base-url}arrow.png"));
+          width: 22px;
+          height: 42px;
+          left: 0;
+          top: 28px;
+        }
+
+        &:after{
+          position: absolute;
+          content: "";
+          .backgr(url("@{base-url}arrow.png"));
+          width: 22px;
+          height: 42px;
+          right: 0;
+          top: 28px;
+          transform: rotate(180deg);
+        }
+
+    }
+
+        &__prof-reviewer{
+      display: block;
+      .font(@navy, 18px, @regular, 30px);
+      margin: 0;
+    }
+   }
+}
