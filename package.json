@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "Education project «Pink» for HTML Academy",
   "main": "Gruntfile.js",
-  "scripts": {
-    "test": "grunt lint"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/up-htmlacademy/42029-Pink.git"
